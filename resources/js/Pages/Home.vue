@@ -8,13 +8,15 @@ import Carrusel from './PartialsHome/Carrusel.vue';
 //IMGS
 import bannerImage from '@/../img/home/IMG_PRUEBA.JPG';
 
+const props = defineProps({
+  marcas: Array,
+});
 
 const duration = 20; // velocidad de desplazamiento (segundos por ciclo)
 </script>
 <template>
-
         <Head :title="'Home'" />
-        <Header />
+        <Header :marcas="marcas" />
         <main class="py-8 relative z-10">
                 <section class="relative px-32 py-8 mx-32 bg-cover bg-no-repeat bg-center h-[50rem] flex items-end  z-10"
                         :style="`background-image: url(${bannerImage})`">
